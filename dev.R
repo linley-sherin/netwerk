@@ -77,3 +77,7 @@ styler::styler_active_file()
 
 # add 'dependency'
 usethis::use_package("assertthat")
+
+# add suggestion (a package that maybe you need for a single function, but now for your entire package to work)
+# this adds line to Description
+usethis::use_package("assert_that", type = "Suggests")
