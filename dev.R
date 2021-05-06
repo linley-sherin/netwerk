@@ -36,3 +36,8 @@ usethis::use_git()
 
 usethis::use_github() # Do not need to supply github username if R studio already set up with username
 
+usethis::use_github_actions()
+
+# documentation -----------------------------------------------------------
+
+usethis::use_readme_rmd()
