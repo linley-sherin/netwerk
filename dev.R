@@ -38,6 +38,8 @@ usethis::use_github() # Do not need to supply github username if R studio alread
 
 usethis::use_github_actions()
 
+
+
 # documentation -----------------------------------------------------------
 
 # Create read me .md and .rmd
@@ -45,6 +47,8 @@ usethis::use_readme_rmd()
 
 # Workflow: edit readme.rmd and then use this function to build
 devtools::build_readme()
+
+
 
 # add PAT -----------------------------------------------------------------
 
@@ -60,6 +64,7 @@ create_github_token()
 
 # To see or update PAT/token
 gitcreds::gitcreds_set()
+
 
 
 # add styler package ------------------------------------------------------
