@@ -19,10 +19,20 @@ devtools::install()
 # To load all functions use
 devtools::load_all()
 
+# Create R script
+usethis::use_r("matrix_sum")
+
 # Create test script
 usethis::use_test("matrix_sum")
 usethis::use_test("stats_fn_dom")
 
 # Test package
 devtools::test()
+
+
+# set up git and github ---------------------------------------------------
+
+usethis::use_git()
+
+usethis::use_github() # Do not need to supply github username if R studio already set up with username
 
