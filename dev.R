@@ -67,6 +67,7 @@ gitcreds::gitcreds_set()
 # Load package, styler makes sure code follows best practice
 library(styler)
 
+# Use styler ?
 styler::styler_active_file()
 
 
