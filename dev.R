@@ -48,5 +48,23 @@ devtools::build_readme()
 
 # add PAT -----------------------------------------------------------------
 
-# Use this function which will prompt you to change PAT/token
+# Find info about what tokens are (?)
+usethis::gh_token_help()
+
+# To see info about token
+gh::gh_whoami()
+
+# Opens a browser window to the GitHub form to generate a PAT, with suggested scopes pre-selected.
+# It also offers advice on storing your PAT.
+create_github_token()
+
+# To see or update PAT/token
 gitcreds::gitcreds_set()
+
+
+# add styler package ------------------------------------------------------
+
+# Load package, styler makes sure code follows best practice
+library(styler)
+
+styler::styler_active_file()
