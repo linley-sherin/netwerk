@@ -40,4 +40,13 @@ usethis::use_github_actions()
 
 # documentation -----------------------------------------------------------
 
+# Create read me .md and .rmd
 usethis::use_readme_rmd()
+
+# Workflow: edit readme.rmd and then use this function to build
+devtools::build_readme()
+
+# add PAT -----------------------------------------------------------------
+
+# Use this function which will prompt you to change PAT/token
+gitcreds::gitcreds_set()

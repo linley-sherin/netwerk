@@ -4,7 +4,6 @@
 # netwerk
 
 <!-- badges: start -->
-
 [![R-CMD-check](https://github.com/linley-sherin/netwerk/workflows/R-CMD-check/badge.svg)](https://github.com/linley-sherin/netwerk/actions)
 <!-- badges: end -->
 
