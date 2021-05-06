@@ -68,3 +68,10 @@ gitcreds::gitcreds_set()
 library(styler)
 
 styler::styler_active_file()
+
+
+
+# add other packages ------------------------------------------------------
+
+# add 'dependency'
+usethis::use_package("assertthat")

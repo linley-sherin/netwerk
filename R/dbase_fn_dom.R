@@ -9,24 +9,34 @@
 
 
 dbase_fn = function(L) {
-  NS = nrow(L) 
-	
+
+  if (nrow(L) !=ncol(L)) stop("This is not a square") ## One way to write an error msg
+
+  stopifnot(nrow(L) == ncol(L)) ## An alternative way of writing an error message
+
+  library(assertthat) ## This package has some good functions, very similar to testthat in theory
+
+  ## This is a nicer way of using stopifnot (which is in base R), this provides a nicer error message
+  assertthat::assert_that(nrow(L) == ncol(L))
+
+  NS = nrow(L)
+
   # Remove cannibalism
-  diag(L)=0 
-  
+  diag(L)=0
+
   # First, identify the basal species
-  nprey = apply(L,2,sum, na.rm = TRUE) 
-  basal = numeric(nrow(L)) 
-  basal[nprey == 0] = 1	
-  rk = basal 
-	
+  nprey = apply(L,2,sum, na.rm = TRUE)
+  basal = numeric(nrow(L))
+  basal[nprey == 0] = 1
+  rk = basal
+
   # Second, identify who feeds on the basal species
-  for(k in 2:10) { 
-    for(i in 1:NS) { 
-  	  for(j in 1:NS){ 
-		if(rk[i]==k-1 && rk[j] == 0 && L[i,j]%in%1 && i!=j) rk[j] = k 
+  for(k in 2:10) {
+    for(i in 1:NS) {
+  	  for(j in 1:NS){
+		if(rk[i]==k-1 && rk[j] == 0 && L[i,j]%in%1 && i!=j) rk[j] = k
 			}
-		  }		
+		  }
 		}
 	return(rk)
 }
